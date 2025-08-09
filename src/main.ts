@@ -26,6 +26,9 @@ async function bootstrap() {
   await app.startAllMicroservices();
 
   await app.listen(process.env.PORT ?? 3000);
+
+  console.log('Health Check configured');
+
   logger.log(`Server running on port: ${process.env.PORT}`)
 }
 bootstrap();
